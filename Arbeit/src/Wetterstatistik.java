@@ -1,24 +1,33 @@
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+
 public class Wetterstatistik {
 
-    public static void main(String[] args)
+    public static void main(String[] args) throws IOException {
 
-    {
+        //Nutzereingabeabfrage
+
+        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+        String text = br.readLine();
+                double april = Double.parseDouble(text.trim().replace(',','.'));
+
+
+
         //Definition
 
-        double april;
-        double mai;
-        double juni;
+
+
         double mittelwert;
 
         //Wetterdaten
 
         april=13.4;
-        mai=14.6;
-        juni=8.3;
+
 
         //Rechnung
 
-        mittelwert=(april+mai+juni)/3;
+        mittelwert=(april+)/3;
 
         //Output
 
@@ -27,8 +36,6 @@ public class Wetterstatistik {
         System.out.println("Mai         \t"  + mai);
         System.out.println("Juni        \t"   + juni);
         System.out.println("Mittelwert  \t" + mittelwert);
-
-
     }
 
 }
