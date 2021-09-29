@@ -9,25 +9,28 @@ public class Wetterstatistik {
         //Nutzereingabeabfrage
 
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-        String text = br.readLine();
-                double april = Double.parseDouble(text.trim().replace(',','.'));
 
+
+        System.out.println("Niederschlagswerte für April");
+        String eingabe = br.readLine();
+        double april = Double.parseDouble(eingabe.trim().replace(',','.'));
+
+        System.out.println("Niederschlagswerte für Mai");
+        eingabe = br.readLine();
+        double mai= Double.parseDouble(eingabe.trim().replace(',','.'));
+
+        System.out.println("Niederschlagswerte für Juni");
+        eingabe = br.readLine();
+        double juni= Double.parseDouble(eingabe.trim().replace(',','.'));
 
 
         //Definition
 
-
-
         double mittelwert;
-
-        //Wetterdaten
-
-        april=13.4;
-
 
         //Rechnung
 
-        mittelwert=(april+)/3;
+        mittelwert=(april+mai+juni)/3;
 
         //Output
 
