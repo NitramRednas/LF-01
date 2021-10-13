@@ -40,9 +40,8 @@ public class ErweiteterTaschenrechner {
             //Wiederhohlabfrage
 
 
-            {  wiederholen();
-                antwort = br.readLine().trim().replace("j", "Ja").replace("J", "Ja");
-            }
+            wiederholen();
+            antwort = br.readLine().trim().replace("j", "Ja").replace("J", "Ja");
         } while (antwort.equalsIgnoreCase("Ja"));
 
     }
