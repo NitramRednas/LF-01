@@ -36,8 +36,11 @@ public class ErweiteterTaschenrechner {
             } else if (operator.equals("w")) {
                 wurzeln();
             }
-            {
-                wiederholen();
+
+            //Wiederhohlabfrage
+
+
+            {  wiederholen();
                 antwort = br.readLine().trim().replace("j", "Ja").replace("J", "Ja");
             }
         } while (antwort.equalsIgnoreCase("Ja"));
