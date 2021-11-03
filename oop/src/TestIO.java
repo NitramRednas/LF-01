@@ -26,5 +26,8 @@ public class TestIO {
         boolean booleaneingabe = IO.readBoolean();
         System.out.println("Tada\t" + booleaneingabe);
 
+
+
+
     }
 }
