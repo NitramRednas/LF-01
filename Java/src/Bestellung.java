@@ -18,7 +18,7 @@ public class Bestellung {
 
             if (schrauben == muttern) {
 
-               preis = (schrauben * 0.05) + (muttern * 0.03) + (muttern * 0.01);
+               preis = (schrauben * 0.05) + (muttern * 0.03) + (unterlegscheiben * 0.01);
                 System.out.println("Ihre Bestellung kostet\t" + preis + "€");
             }
             else
