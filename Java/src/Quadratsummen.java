@@ -2,6 +2,8 @@ import java.io.IOException;
 
 public class Quadratsummen {
 
+    //Braucht noch mal nen Drüberguck
+
     public static void main(String[] args) throws IOException {
 
         System.out.println("Geben sie die Zahl ein bis zu der Quadriert werden soll");
