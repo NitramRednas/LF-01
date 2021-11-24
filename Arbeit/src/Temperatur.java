@@ -80,29 +80,47 @@ public class Temperatur {
         System.out.println("Die Spannweite beträgt\t" + Math.round(spannweite * 100.0) / 100.0);
 
         //Maximale Differenz
-        double d1,d2,d3,d4;
+        double d1, d2, d3, d4, d5, d6, d7;
         double max;
 
         d1 = tag1 - tag2;
-        if (d1 < 0){
+        if (d1 < 0) {
             d1 = d1 * (-d1);
         }
+        d5 = tag2 - tag3;
+        if (d5 < 0) {
+            d5 = d5 * (-d5);
+        }
         d2 = tag3 - tag4;
-        if (d2 < 0){
+        if (d2 < 0) {
             d2 = d2 * (-d2);
         }
+        d6 = tag4 - tag5;
+        if (d6 < 0) {
+            d6 = d6 * (-d6);
+        }
         d3 = tag5 - tag6;
-        if (d3 < 0){
+        if (d3 < 0) {
             d3 = d3 * (-d3);
         }
-        d4 = tag7;
-
-        Math.max(d1,d2);
-
-
-
+        d4 = tag6 - tag7;
+        if (d4 < 0) {
+            d4 = d4 * (-d4);
+        }
 
 
+        max = Math.max(d1, d2);
+
+        if (Math.max(d3, d4) > max) {
+            max = Math.max(d3, d4);
+        }
+        if (Math.max(d5, d6) > max) {
+            max = Math.max(d5, d6);
+        }
+        if (max < 0) {
+            max = max * (-max);
+        }
+        System.out.println("Die Maximale Differenz beträgt\t" + max);
     }
 
 }

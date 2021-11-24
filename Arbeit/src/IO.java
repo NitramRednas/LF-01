@@ -70,29 +70,86 @@ public class IO {
     public static boolean readBoolean() throws IOException {
 
         while (true) {
-
-            try {
-                String eingabe = IO.readString();
-                if (eingabe != null) {
-                    if ((eingabe.equalsIgnoreCase("Ja"))
-                            || (eingabe.equalsIgnoreCase("j"))
-                            || (eingabe.equalsIgnoreCase("y"))
-                            || (eingabe.equalsIgnoreCase("yes"))) {
-                        return true;
-                    }
-                } else if ((eingabe.equalsIgnoreCase("No"))
-                        || (eingabe.equalsIgnoreCase("N"))
-                        || (eingabe.equalsIgnoreCase("Nein"))) {
-                    return false;
+            String eingabe = IO.readString();
+            if (eingabe != null) {
+                if ((eingabe.equalsIgnoreCase("Ja"))
+                        || (eingabe.equalsIgnoreCase("j"))
+                        || (eingabe.equalsIgnoreCase("y"))
+                        || (eingabe.equalsIgnoreCase("yes"))) {
+                    return true;
                 }
-
-            } finally {
-                System.out.println("Bitte geben sie Ja(Y) ein");
+            } else if ((eingabe.equalsIgnoreCase("No"))
+                    || (eingabe.equalsIgnoreCase("N"))
+                    || (eingabe.equalsIgnoreCase("Nein"))) {
+                return false;
             }
+
         }
     }
 
+    /**
+     * Tut ein INT Array
+     *
+     * @return int Werteliste
+     * @throws IOException
+     */
+    public static int[] arrayint() throws IOException {
+
+        System.out.println("wie groß soll das Array sein?");
+        int a = IO.readInteger();
+        int[] werteliste = new int[a];
+
+        for (int i = 0; i < werteliste.length; i++) {
+            System.out.println("Geben sie ihren Wert ein");
+            werteliste[i] = IO.readInteger();
+
+        }
+        return werteliste;
+    }
+
+    /**
+     * Tut ein double Array
+     *
+     * @return double Werteliste
+     * @throws IOException
+     */
+    public static double[] arraydouble() throws IOException {
+
+        System.out.println("wie groß soll das Array sein?");
+        int a = IO.readInteger();
+        double[] werteliste = new double[a];
+
+        for (int i = 0; i < werteliste.length; i++) {
+            System.out.println("Geben sie ihren Wert ein");
+            werteliste[i] = IO.readInteger();
+
+        }
+        return werteliste;
+
+    }
+
+    /**
+     * Tut ein String Array
+     *
+     * @return String werteliste
+     * @throws IOException
+     */
+    public static String[] arraystring() throws IOException {
+
+        System.out.println("Wie groß soll das Array sein?");
+        int a = IO.readInteger();
+        String[] werteliste = new String[a];
+
+        for (int i = 0; i < werteliste.length; i++) {
+            System.out.println("Geben sie ihren String ein");
+            werteliste[i] = IO.readString();
+        }
+        return werteliste;
+    }
+
+
 }
+
 
 
 
