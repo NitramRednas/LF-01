@@ -95,12 +95,25 @@ public class IO {
      */
     public static int[] arrayint() throws IOException {
 
-        System.out.println("wie groß soll das Array sein?");
+        System.out.println("Wie groß soll das Array sein?");
         int a = IO.readInteger();
         int[] werteliste = new int[a];
 
+        return werteliste;
+    }
+
+    /**
+     * Tut ein INT Array
+     *
+     * @return int Werteliste
+     * @throws IOException
+     */
+    public static int[] arrayint(int a) throws IOException {
+
+        int[] werteliste = new int[a];
+
         for (int i = 0; i < werteliste.length; i++) {
-            System.out.println("Geben sie ihren Wert ein");
+            System.out.println("Wert" + (i + 1) + ": ");
             werteliste[i] = IO.readInteger();
 
         }
@@ -119,12 +132,26 @@ public class IO {
         int a = IO.readInteger();
         double[] werteliste = new double[a];
 
+        return werteliste;
+    }
+
+
+
+    /**
+     * Tut ein double Array
+     *
+     * @return double Werteliste
+     * @throws IOException
+     */
+    public static double[] arraydouble(int a) throws IOException {
+        double[] werteliste = new double[a];
+
         for (int i = 0; i < werteliste.length; i++) {
-            System.out.println("Geben sie ihren Wert ein");
+            System.out.println("Wert" + (i + 1) + ": ");
             werteliste[i] = IO.readInteger();
 
-        }
-        return werteliste;
+        }return werteliste;
+
 
     }
 
