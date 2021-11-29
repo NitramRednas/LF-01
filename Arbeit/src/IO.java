@@ -87,94 +87,124 @@ public class IO {
         }
     }
 
+
+    //Array´s
+    //Integrer
+
     /**
-     * Tut ein INT Array
+     * Ließt ein eindiemensionales Array von Ganzzahlen ein.
      *
-     * @return int Werteliste
+     * @return Ein eindimensionales Array
      * @throws IOException
      */
-    public static int[] arrayint() throws IOException {
+    public static int[] readItntegrerArray1D() throws IOException {
+
+        System.out.println("Wie viele Werte");
+        int zeilen = readInteger();
+        int[] array = readItntegrerArray1D(zeilen);
+
+        return array;
+    }
+
+    /**
+     * Ließt ein eindiemensionales Array von Ganzzahlen ein.
+     *
+     * @param anzahlwerte Die Anzahl der Array Elemente
+     * @return Ein eindimensionales Array
+     * @throws IOException
+     */
+    public static int[] readItntegrerArray1D(int anzahlwerte) throws IOException {
+
+        int[] array = new int[anzahlwerte];
+        array = readItntegrerArray1D(array);
+        return array;
+
+    }
+
+    public static int[] readItntegrerArray1D(int[] array) throws IOException {
+        for (int i = 0; i < array.length; i++) {
+            System.out.println("Wert eingeben für [" + (i+1) + "]: ");
+            array[i] = readInteger();
+        }
+        return array;
+    }
+
+    //double
+
+    /**
+     * Ließt ein eindiemensionales Array von Kommazahlen ein.
+     *
+     * @return Ein eindimensionales Array
+     * @throws IOException
+     */
+    public static double[] readdoubleArray1D() throws IOException {
+
+        System.out.println("Wie viele Werte");
+        int zeilen = readInteger();
+        double[] array = readdoubleArray1D(zeilen);
+
+        return array;
+    }
+
+    /**
+     * Ließt ein eindiemensionales Array von Kommazahlen ein.
+     *
+     * @param anzahlwerte Die Anzahl der Array Elemente
+     * @return Ein eindimensionales Array
+     * @throws IOException
+     */
+    public static double[] readdoubleArray1D(int anzahlwerte) throws IOException {
+
+        double[] array = new double[anzahlwerte];
+        array = readdoubleArray1D(array);
+        return array;
+
+    }
+
+    public static double[] readdoubleArray1D(double[] array) throws IOException {
+        for (int i = 0; i < array.length; i++) {
+            System.out.println("Wert eingeben für [" + (i+1) + "]: ");
+            array[i] = readDouble();
+        }
+        return array;
+    }
+
+
+    //String
+
+    /**
+     * Ließt ein eindiemensionales Array von Texten ein.
+     *
+     * @return String Array
+     * @throws IOException
+     */
+    public static String[] readSringArray1D() throws IOException {
 
         System.out.println("Wie groß soll das Array sein?");
-        int a = IO.readInteger();
-        int[] werteliste = new int[a];
+        int a = readInteger();
+        String[] array = readSringArray1D(a);
 
-        return werteliste;
+        return array;
     }
 
-    /**
-     * Tut ein INT Array
-     *
-     * @return int Werteliste
-     * @throws IOException
-     */
-    public static int[] arrayint(int a) throws IOException {
+    public static String[] readSringArray1D(int anzahlwerte) throws IOException {
+        String[] array = new String[anzahlwerte];
+        array = readSringArray1D(array);
+        return array;
 
-        int[] werteliste = new int[a];
+    }
 
-        for (int i = 0; i < werteliste.length; i++) {
-            System.out.println("Wert" + (i + 1) + ": ");
-            werteliste[i] = IO.readInteger();
+    public static String[] readSringArray1D(String[] array) throws IOException {
+
+        for (int i = 0; i < array.length; i++) {
+            System.out.println("Wert eingeben für [" + (i+1) + "]: ");
+            array[i] = IO.readString();
 
         }
-        return werteliste;
-    }
-
-    /**
-     * Tut ein double Array
-     *
-     * @return double Werteliste
-     * @throws IOException
-     */
-    public static double[] arraydouble() throws IOException {
-
-        System.out.println("wie groß soll das Array sein?");
-        int a = IO.readInteger();
-        double[] werteliste = new double[a];
-
-        return werteliste;
-    }
-
-
-
-    /**
-     * Tut ein double Array
-     *
-     * @return double Werteliste
-     * @throws IOException
-     */
-    public static double[] arraydouble(int a) throws IOException {
-        double[] werteliste = new double[a];
-
-        for (int i = 0; i < werteliste.length; i++) {
-            System.out.println("Wert" + (i + 1) + ": ");
-            werteliste[i] = IO.readInteger();
-
-        }return werteliste;
+        return array;
 
 
     }
-
-    /**
-     * Tut ein String Array
-     *
-     * @return String werteliste
-     * @throws IOException
-     */
-    public static String[] arraystring() throws IOException {
-
-        System.out.println("Wie groß soll das Array sein?");
-        int a = IO.readInteger();
-        String[] werteliste = new String[a];
-
-        for (int i = 0; i < werteliste.length; i++) {
-            System.out.println("Geben sie ihren String ein");
-            werteliste[i] = IO.readString();
-        }
-        return werteliste;
-    }
-
-
 }
 
 
