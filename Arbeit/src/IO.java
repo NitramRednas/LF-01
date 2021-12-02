@@ -99,7 +99,7 @@ public class IO {
      */
     public static int[] readItntegrerArray1D() throws IOException {
 
-        System.out.println("Wie viele Werte");
+        System.out.print("Wie viele Werte");
         int zeilen = readInteger();
         int[] array = readItntegrerArray1D(zeilen);
 
@@ -123,7 +123,7 @@ public class IO {
 
     public static int[] readItntegrerArray1D(int[] array) throws IOException {
         for (int i = 0; i < array.length; i++) {
-            System.out.println("Wert eingeben für [" + (i+1) + "]: ");
+            System.out.print("Wert eingeben für [" + (i+1) + "]: ");
             array[i] = readInteger();
         }
         return array;
@@ -139,7 +139,7 @@ public class IO {
      */
     public static double[] readdoubleArray1D() throws IOException {
 
-        System.out.println("Wie viele Werte");
+        System.out.print("Wie viele Werte");
         int zeilen = readInteger();
         double[] array = readdoubleArray1D(zeilen);
 
@@ -163,7 +163,7 @@ public class IO {
 
     public static double[] readdoubleArray1D(double[] array) throws IOException {
         for (int i = 0; i < array.length; i++) {
-            System.out.println("Wert eingeben für [" + (i+1) + "]: ");
+            System.out.print("Wert eingeben für [" + (i+1) + "]: ");
             array[i] = readDouble();
         }
         return array;
@@ -180,7 +180,7 @@ public class IO {
      */
     public static String[] readSringArray1D() throws IOException {
 
-        System.out.println("Wie groß soll das Array sein?");
+        System.out.print("Wie groß soll das Array sein?");
         int a = readInteger();
         String[] array = readSringArray1D(a);
 
@@ -197,7 +197,7 @@ public class IO {
     public static String[] readSringArray1D(String[] array) throws IOException {
 
         for (int i = 0; i < array.length; i++) {
-            System.out.println("Wert eingeben für [" + (i+1) + "]: ");
+            System.out.print("Wert eingeben für [" + (i+1) + "]: ");
             array[i] = IO.readString();
 
         }

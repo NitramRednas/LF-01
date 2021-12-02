@@ -8,9 +8,9 @@ public class Summen {
         int[] array = IO.readItntegrerArray1D();
 
         int x = 0;
-        int xx = 0;
+        int xx = array[0];
         int y = 0;
-        int yy = 0;
+        int yy = array[0];
 
         for (int i = 0; i < array.length; i++) {
             if (array[i] % 2 == 0) {
