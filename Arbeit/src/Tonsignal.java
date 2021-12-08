@@ -13,16 +13,16 @@ public class Tonsignal {
         glatt[signal.length - 1] = (signal[signal.length - 2] + signal[signal.length - 1]) / 2;
 
         for (int i = 1; i < glatt.length - 1; i++) {
-            glatt[i] = (signal[i - 1] + signal[i] + signal[i + 1] / 3);
+            glatt[i] = (signal[i - 1] + signal[i] + signal[i + 1]) / 3;
         }
         System.out.println("");
 
         for (int i = 0; i < glatt.length; i++) {
-            System.out.print(signal[i]);
+            System.out.print("\t" + signal[i]);
         }
         System.out.println();
         for (int i = 0; i < glatt.length; i++) {
-            System.out.print(glatt[i]);
+            System.out.print("\t" + glatt[i]);
         }
     }
 }
