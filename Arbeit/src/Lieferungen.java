@@ -68,7 +68,7 @@ public class Lieferungen {
         }
         System.out.println("Spaltensummen");
         for (int i = 0; i < spaltensumme.length; i++){
-            System.out.print(spaltensumme[i] + "\t");
+            System.out.print(spaltensumme[i] + "\t" );
         }
         System.out.println();
 
