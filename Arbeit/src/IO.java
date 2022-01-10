@@ -1,6 +1,7 @@
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
+import java.util.Random;
 
 public class IO {
 
@@ -350,6 +351,22 @@ public class IO {
         return array;
 
     }
+
+    //Zufallszahl
+
+    /**
+     * Genereiert eine Zufallszahl in einem bestimmten Bereich
+     * @param von Untere Grenze des Zufallsbereichs
+     * @param bis Obere Grenze des Zufallsbereichs
+     * @return    Die generierte Zufallszahl
+     */
+    public static int generiereZufallszahl (int von, int bis){
+      Random random = new Random();
+      return random.nextInt(bis + 1 - von) + von;
+    }
+
+
+
 }
 
 
